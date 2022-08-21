@@ -1,4 +1,6 @@
 #程序文件Pex3_21.py
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 import numpy as np
 from scipy.optimize import fsolve
 

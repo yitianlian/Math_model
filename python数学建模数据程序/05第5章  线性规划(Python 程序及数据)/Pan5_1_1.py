@@ -2,9 +2,10 @@
 import matplotlib.pyplot as plt
 from numpy import ones, diag, c_, zeros
 from scipy.optimize import linprog
-plt.rc('text',usetex=True); plt.rc('font',size=16)
+plt.rc('text',usetex=False); plt.rc('font',size=16)
 c = [-0.05,-0.27,-0.19,-0.185,-0.185]
-A = c_[zeros(4),diag([0.025,0.015,0.055,0.026])]
+A = c_[zeros(4),diag([0.025,0.015,0.055,0.026])] # 按列连接矩阵
+print(A)
 Aeq =[[1,1.01,1.02,1.045,1.065]]; beq = [1]
 a=0; aa=[]; ss=[];
 while a<0.05:

@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 def fac(n): return (1 if n<1 else n*fac(n-1))
 def item(n,x): return (-1)**n*x**(2*n+1)/fac(2*n+1)
 def mysin(n,x): return (0 if n<0 else mysin(n-1,x)+item(n,x))
+# sourcery skip: avoid-builtin-shadow
 x=np.linspace(-2*np.pi,2*np.pi,101)
 plt.plot(x,np.sin(x),'*-')
 str=['v-','H--','-.']

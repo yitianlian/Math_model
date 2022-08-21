@@ -7,6 +7,7 @@ x=iris.data; y=iris.target
 parameters = {'kernel':('linear','rbf'), 'C':[1,10,15]}
 svc=svm.SVC(gamma='scale')
 clf=GridSearchCV(svc,parameters,cv=5)  #cv为交叉验证参数，为5折
+print(x, y)
 clf.fit(x,y)
 print("最佳的参数值:", clf.best_params_)
 print("score：",clf.score(x,y))

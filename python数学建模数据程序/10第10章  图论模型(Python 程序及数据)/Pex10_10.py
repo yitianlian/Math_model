@@ -12,7 +12,7 @@ for i in range(1,7):
     for j in range(1,7): d[i-1,j-1]=c[i][j]
 print(d)
 q=np.array([80,90,30,20,60,10])
-m=d@q  #计算运力，这里使用矩阵乘法
+m=d@q  # 计算运力，这里使用矩阵乘法
 mm=m.min()  #求运力的最小值
 ind=np.where(m==mm)[0]+1  #python下标从0开始，np.where返回值为元组
 print("运力m=",m,'\n最小运力mm=',mm,"\n选矿厂的设置位置为：",ind)

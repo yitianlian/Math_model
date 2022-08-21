@@ -10,6 +10,7 @@ for i in range(5):
 print(b)
 G=nx.DiGraph(b)
 p=nx.dijkstra_path(G, source=0, target=4, weight='weight')  #求最短路径；
+print(p)
 print("最短路径为:",np.array(p)+1)  #python下标从0开始
 d=nx.dijkstra_path_length(G, 0, 4, weight='weight') #求最短距离
 print("所求的费用最小值为：",d)

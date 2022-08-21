@@ -13,6 +13,8 @@ for i in range(1, len(s), 2):  #读入偶数行数据
     for j in range(len(d2)):
         if d2[j] != "": b.append(eval(d2[j])) #把非空的字符串转换为人口数据
 c=np.vstack((a,b))  #构造两行的数组
+print(a)
+print(b)
 np.savetxt("Pdata8_10_2.txt", c)  #把数据保存起来供下面使用
 x=lambda t, r, xm: xm/(1+(xm/3.9-1)*np.exp(-r*(t-1790)))
 bd=((0, 200), (0.1,1000))  #约束两个参数的下界和上界
